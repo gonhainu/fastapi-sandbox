@@ -51,7 +51,7 @@ LOG_CONFIG = {
             "backupCount": 1
         }
     },
-    "root": {"handlers": ["console", "app"], "level": "INFO"},
+    "root": {"handlers": ["console"], "level": "INFO"},
     "loggers": {
         "gunicorn": {"propagate": True},
         "gunicorn.access": {"propagate": True},
@@ -69,4 +69,4 @@ LOG_CONFIG = {
 }
 
 logging.config.dictConfig(LOG_CONFIG)
-logger = logging.getLogger(__name__)
+logger = logging.getLogger("uvicorn.error")
