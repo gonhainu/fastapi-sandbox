@@ -1,9 +1,10 @@
 from fastapi import FastAPI
+import logging
 # from .app_logging import getLogger
 
-# logger = getLogger(__name__)
+logger = logging.getLogger("uvicorn.error")
 
-from app.app_logging import logger
+# from app.app_logging import logger
 
 app = FastAPI()
 
